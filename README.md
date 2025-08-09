@@ -32,14 +32,13 @@ class SelectGameDirectoryButton(Static):
 
 
     def on_button_pressed(self) -> None:
-        from shoal.main_app import app
         app.push_screen(SelectionScreen(
             starting_directory='',
             extensions=[],
             selection_filter=SelectionFilter.DIRECTORY,
             cancel_function=cancel_was_hit, 
             confirm_function=confirm_was_hit,
-            widgets_to_refresh_on_screen_pop=[app.game_dir_select]
+            widgets_to_refresh_on_screen_pop=[self.app.game_dir_select]
             )
         )
 ```
