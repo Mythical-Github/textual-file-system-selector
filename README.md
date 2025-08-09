@@ -14,7 +14,7 @@ https://github.com/user-attachments/assets/58283f59-8c5e-43bf-bf68-c7e94ba682c6
 ## Code Example
 
 ```python
-from textual_file_system_selector.file_system_selector import SelectionScreen, SelectionFilter
+from textual_file_system_selector.file_system_selector_screen import SelectionScreen, SelectionFilter
 
 class SelectGameDirectoryButton(Static):
     def compose(self) -> ComposeResult:
