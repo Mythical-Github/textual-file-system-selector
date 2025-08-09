@@ -1,6 +1,7 @@
 from typing import Callable, Any, Tuple
 from enum import Enum
 import os
+import ctypes
 
 from textual import on
 from textual.widget import Widget
