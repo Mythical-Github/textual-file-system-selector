@@ -1,0 +1,30 @@
+[project]
+name = "textual-file-system-selector"
+version = "0.1.0"
+description = "A generic file system selector screen for textual apps"
+readme = "README.md"
+authors = [
+    { name = "Mythical-Github", email = "67753356+Mythical-Github@users.noreply.github.com" }
+]
+requires-python = ">=3.9.1"
+dependencies = [
+    "textual>=1.0.0",
+    "textual-base-widgets",
+]
+
+[project.scripts]
+textual-file-system-selector = "textual_file_system_selector:main"
+
+[build-system]
+requires = ["uv_build>=0.7.19,<0.8"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.3.0",
+    "pyright>=1.1.403",
+    "ruff>=0.12.8",
+]
+
+[tool.uv.sources]
+textual-base-widgets = { git = "https://github.com/Mythical-Github/textual-base-widgets" }
