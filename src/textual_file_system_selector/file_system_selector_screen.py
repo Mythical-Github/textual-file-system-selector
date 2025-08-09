@@ -1,4 +1,5 @@
 from typing import Callable, Any, Tuple
+from enum import Enum
 
 from textual import on
 from textual.widget import Widget
