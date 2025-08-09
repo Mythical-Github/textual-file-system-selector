@@ -32,7 +32,7 @@ class SelectGameDirectoryButton(Static):
 
 
     def on_button_pressed(self) -> None:
-        app.push_screen(SelectionScreen(
+        self.app.push_screen(SelectionScreen(
             starting_directory='',
             extensions=[],
             selection_filter=SelectionFilter.DIRECTORY,
