@@ -7,12 +7,15 @@ Only tested on Windows 10/11 as of now.
 
 ## Video Example
 
+https://github.com/user-attachments/assets/58283f59-8c5e-43bf-bf68-c7e94ba682c6
 
 ---
 
 ## Code Example
 
 ```python
+from textual_file_system_selector.file_system_selector import SelectionScreen, SelectionFilter
+
 class SelectGameDirectoryButton(Static):
     def compose(self) -> ComposeResult:
         self.select_game_directory_button = BaseButton(
@@ -30,7 +33,7 @@ class SelectGameDirectoryButton(Static):
 
     def on_button_pressed(self) -> None:
         from shoal.main_app import app
-        app.push_screen(game_directory_screen.SelectionScreen(
+        app.push_screen(SelectionScreen(
             starting_directory='',
             extensions=[],
             selection_filter=SelectionFilter.DIRECTORY,
